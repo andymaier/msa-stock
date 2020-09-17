@@ -8,7 +8,8 @@ node {
         }
 
         stage('Docker image') {
-             docker.build("membrane/msa-stock")
+             //docker.build("membrane/msa-stock")
+             sh "docker build -t membrane/msa-stock ."
         }
 
         stage("Deploy") {
